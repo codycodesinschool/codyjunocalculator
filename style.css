@@ -1,0 +1,136 @@
+:root {
+
+
+    --gradient-s: #00f510;
+    --gradient-e: #1618b3;
+    --button-color: rgb(99,78,11);
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(45deg, var(--gradient-s),var(--gradient-e));
+    background-size: 400% 400%;
+    animation: gradient 7.5s ease infinite;
+    height: 100vh;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+}
+.header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    vertical-align: middle;
+}
+.footer {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100%;
+}
+.content {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    transform:translate(50%,0%);
+    padding: 10px;
+}
+.result {
+    width: 30vw;
+    height: 5vh;
+    background-color: var(--button-color);
+    font-size: 36pt;
+    padding: 34px;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    
+    50% {
+        background-position: 100% 50%;
+    }
+    
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.buttons {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 4;
+    grid-template-rows: 4;
+    gap: 2px;
+}
+.buttons div {
+    background: var(--button-color);
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+}
+.buttons div button {
+    width: 80px;
+    height: 80px;
+    background-color: var(--button-color);
+}
+.b1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.b2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.b3 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.bplus {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.bminus {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.btimes {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+.bdivide {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.noselect{
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+     user-select:none;
+ }
+
